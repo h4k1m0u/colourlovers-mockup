@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Colourlovers Mockup</title>
+    <link href="{{ url_for('static', filename='style.css') }}?d={{ getmtime('static/style.css') }}" rel="stylesheet" />
+    <style type="text/css">
+        body{background-color:{{ colour1 }};}
+        h1, button{color:{{ colour2 }};}
+        input, button{border:1px solid {{ colour3 }};}
+        li, a:hover{color:{{ colour4 }};}
+        a{color:{{ colour5 }};}
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="#">Web</a> |
+            </li>
+            <li>
+                <a href="#">Images</a> |
+            </li>
+            <li>
+                <a href="#">Maps</a> |
+            </li>
+            <li>
+                <a href="#">News</a> |
+            </li>
+            <li>
+                <a href="#">more</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#">iJoojle</a> |
+            </li>
+            <li>
+                <a href="#">Sign In</a> |
+            </li>
+        </ul>
+    </header>
+
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Advertising Programs</a> |
+                </li>
+                <li>
+                    <a href="#">Business Solutions</a> |
+                </li>
+                <li>
+                    <a href="#">About Joojle</a>
+                </li>
+            </ul>
+        </nav>
+    
+    </footer>
+</body>
+</html>
